@@ -10,13 +10,13 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js',
+    filename: 'slider.min.js',
     clean: mode === 'production'
   },
   target: ['web', 'es5'],
   devtool: mode === 'production' ? 'source-map' : 'inline-source-map',
   devServer: {
-    watchFiles: ["./src/*"],
+    watchFiles: ["./src/*", "./demo/*"],
     compress: true,
     port: 9000,
     open: true,
@@ -26,15 +26,16 @@ module.exports = {
     extensions: [".js", ".ts"],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "index.html")
-    }),
+    /*new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "demo/index.html"),
+      minify: false
+    }),*/
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css',
+      filename: 'slider.min.css',
     }),
     new CopyPlugin({
       patterns: [
-        { from: "public", to: "" },
+        { from: "demo", to: "demo" },
       ],
     }),
   ],
@@ -66,10 +67,6 @@ module.exports = {
         generator: {
           filename: "images/[hash][ext]"
         }
-      },
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
       },
     ]
   }
