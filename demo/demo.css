@@ -48,6 +48,7 @@ table {
 .demo-wrapper {
     width: 320px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 .demo-wrapper h1 {
     font-family: Arial, serif;
