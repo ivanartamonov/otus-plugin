@@ -37,7 +37,7 @@
 
 <!-- Init plugin -->
 <script>
-new Slider('.yt-slider', {
+new YtSlider('.yt-slider', {
   visible: 3
 })
 </script>

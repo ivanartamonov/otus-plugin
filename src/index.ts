@@ -71,6 +71,4 @@ class Slider {
   }
 }
 
-new Slider(".yt-slider");
-
 export default Slider;

@@ -9,6 +9,8 @@ const mode = process.env.NODE_ENV;
 module.exports = {
   entry: './src/index.ts',
   output: {
+    library: 'YtSlider',
+    libraryExport: 'default',
     path: path.resolve(__dirname, 'dist'),
     filename: 'slider.min.js',
     clean: mode === 'production'
