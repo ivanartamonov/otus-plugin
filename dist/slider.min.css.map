@@ -1,0 +1,1 @@
+{"version":3,"file":"slider.min.css","mappings":"AAAA,KACI,eACJ,CACA,WACI,kBACJ,CACA,UACI,cAAe,CACf,eAAiB,CACjB,kBACJ","sources":["webpack://plugin/./src/slider.css"],"sourcesContent":["body {\n    background: #fff;\n}\n.yt-slider {\n    margin-bottom: 50px;\n}\n.yt-title {\n    font-size: 22px;\n    font-weight: bold;\n    margin-bottom: 10px;\n}"],"names":[],"sourceRoot":""}
