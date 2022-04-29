@@ -4,11 +4,11 @@
 
 Плагин для создания виджета, который раздвигается вниз как в YouTube.
 
-![YouTube Screenshot](demo/youtube.png)
+<img src="demo/youtube.png" alt="drawing" width="300"/>
 
 Виджет имеет заголовок и произвольное количество "карточек".
 
-![Slider Screenshot](demo/slider.png)
+<img src="demo/slider.png" alt="drawing" width="300"/>
 
 ## Подключение
 
