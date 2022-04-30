@@ -6,11 +6,11 @@ interface Config {
 
 class Slider {
   private config: Config;
-  private root: NodeListOf<HTMLElement>;
+  private root: NodeListOf<HTMLElement> | HTMLElement[];
   private entryWrapper = ".yt-entries";
   private entryClass = ".yt-entry";
 
-  constructor(selector: string, config?: Config) {
+  constructor(selector: string | HTMLElement, config?: Config) {
     if (config === undefined) {
       this.config = {
         visible: 3,
@@ -19,9 +19,13 @@ class Slider {
       this.config = config;
     }
 
-    this.root = document.querySelectorAll(selector);
-    if (this.root.length === 0) {
-      throw new Error(`Selector ${selector} not found`);
+    if (typeof selector === "string") {
+      this.root = document.querySelectorAll(selector);
+      if (this.root.length === 0) {
+        throw new Error(`Selector ${selector} not found`);
+      }
+    } else {
+      this.root = [selector];
     }
 
     this.root.forEach((el) => {
