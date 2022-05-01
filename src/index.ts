@@ -38,9 +38,7 @@ class Slider {
 
   private initSlider(el: HTMLElement) {
     const wrapper: HTMLElement | null = el.querySelector(this.entryWrapper);
-    if (wrapper === null) {
-      return;
-    }
+    if (!wrapper) return;
 
     const entries: NodeListOf<HTMLElement> = wrapper.querySelectorAll(
       this.entryClass
