@@ -1,0 +1,35 @@
+body {
+  background: #fff;
+}
+.yt-slider {
+  margin-bottom: 50px;
+}
+.yt-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.yt-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+.yt-arrow-down {
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #f1f1f1;
+}
+.yt-arrow-down:hover {
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+.yt-arrow-down div {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
