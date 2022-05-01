@@ -15,31 +15,30 @@
 ```html
 <head>
   <!-- Include plugin files -->
-  <link rel="stylesheet" href="slider.min.css">
+  <link rel="stylesheet" href="slider.min.css" />
   <script src="slider.min.js"></script>
 </head>
 <body>
+  <!-- Add Html markup -->
+  <div class="yt-slider">
+    <div class="yt-title">Title</div>
+    <div class="yt-entries">
+      <div class="yt-entry">
+        <!-- Some you content -->
+      </div>
+      <div class="yt-entry">
+        <!-- Some you content -->
+      </div>
 
-<!-- Add Html markup -->
-<div class="yt-slider">
-  <div class="yt-title">Title</div>
-  <div class="yt-entries">
-    <div class="yt-entry">
-      <!-- Some you content -->
+      <!-- more entries... -->
     </div>
-    <div class="yt-entry">
-      <!-- Some you content -->
-    </div>
-    
-    <!-- more entries... -->
   </div>
-</div>
 
-<!-- Init plugin -->
-<script>
-new YtSlider('.yt-slider', {
-  visible: 3
-})
-</script>
+  <!-- Init plugin -->
+  <script>
+    new YtSlider(".yt-slider", {
+      visible: 3,
+    });
+  </script>
 </body>
 ```

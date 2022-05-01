@@ -6,8 +6,11 @@ interface Config {
 
 class Slider {
   private config: Config;
+
   private root: NodeListOf<HTMLElement> | HTMLElement[];
+
   private entryWrapper = ".yt-entries";
+
   private entryClass = ".yt-entry";
 
   constructor(selector: string | HTMLElement, config?: Config) {
@@ -58,20 +61,14 @@ class Slider {
     wrapper.append(hidden);
 
     const arrow = document.createElement("div");
-    arrow.addEventListener("click", this.onShow);
+    arrow.addEventListener("click", () => {
+      hidden.style.height = `auto`;
+      hidden.style.maxHeight = `1000px`;
+      arrow.remove();
+    });
     arrow.className = "yt-arrow-down";
     arrow.innerHTML = "<div></div>";
     wrapper.append(arrow);
-  }
-
-  onShow(e: Event) {
-    const arrow = <HTMLElement>e.currentTarget;
-    const hidden = <HTMLElement>arrow.previousSibling;
-
-    hidden.style.height = `auto`;
-    hidden.style.maxHeight = `1000px`;
-
-    arrow.remove();
   }
 }
 

@@ -1,5 +1,5 @@
-module.exports = api => {
-  const isTest = api.env('test');
+module.exports = (api) => {
+  const isTest = api.env("test");
 
   return {
     presets: [
@@ -9,12 +9,10 @@ module.exports = api => {
           useBuiltIns: "entry",
           corejs: "3",
           // caller.target will be the same as the target option from webpack
-          targets: isTest
-            ? { node: "current" }
-            : { chrome: "58", ie: "11" }
-        }
+          targets: isTest ? { node: "current" } : { chrome: "58", ie: "11" },
+        },
       ],
-      '@babel/preset-typescript'
-    ]
-  }
-}
+      "@babel/preset-typescript",
+    ],
+  };
+};
